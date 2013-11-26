@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# howsmartareyouu: http://ogp.me/ns/fb/howsmartareyouu#">
+  <title>How Smart Are You? Take the quiz to find out.</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+  <!-- Open Graph meta tags -->
+  <meta property="fb:app_id" content="175732445959885" />
+  <meta property="og:site_name" content="How Smart Are You?"/>
+
+  <meta property="og:type"   content="website" />
+  <meta property="og:url"    content="http://www.howsmartareyou.ca" />
+  <meta property="og:title" content="How smart are you?" />
+  <meta property="og:description" content="Only 5% of all people can pass this short quiz. Can you answer all the questions correctly?" />
+  <meta property="og:image" content="http://www.howsmartareyou.ca/img/infographics/3.png" />
+
+  <link rel="stylesheet" type="text/css" href="css/style.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script src="js/hsay.js"></script>
+  <script src="js/handlebars.js"></script>
+  <script src="js/templates.js"></script>
+  <script src="js/jqueryrotate.js"></script>
+  <script src="js/fb.js"></script>
+
+  <!-- start Mixpanel -->
+  <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+  typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+  b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+  mixpanel.init("49640f2eab670923384bc75128b2ecdc");
+  
+  mixpanel.identify();
+  </script>
+  <!-- end Mixpanel -->
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  
+    ga('create', 'UA-45995661-1', 'howsmartareyou.ca');
+    ga('send', 'pageview');
+  
+  </script>
+</head>
+
+<body>
+<div id="page-wrapper">
+  <div id="content-wrapper">
+
+    <div id="login">
+      <img src="img/nerd.png" id="nerd"/>
+      <h1>How Smart<span>Are You?</span></h1>
+      <h2>Only 5% of all people can pass this simple quiz</h2>
+      <a href="#" id="fb-login" class="btn btn-fb">
+        <img src="img/fb.png" />
+        Take the quiz &raquo;
+      </a>
+    </div>
+    
+    <div id="quiz">
+      <h1>How Smart Are You?</h1>
+      <div class="dial">
+        <img src="img/dial.png" />
+        <img src="img/needle.png" id="needle" />
+        <span class="your-score">Your score</span>
+        <span class="score"><span>0</span>%</span>
+      </div>
+      <div class="progress-wrapper">
+        <span><span class="remaining">1</span>/<span class="total">10</span></span>
+        <div class="progress progress-hsay">
+          <div class="progress-bar" role="progressbar" style="width: 100%;">
+          </div>
+        </div>
+      </div>
+      <div class="content">
+      </div>
+    </div>
+    
+    <div id="report">
+      <h2>Your results are in!</h2>
+      <div id="infographic"></div>
+      <a href="#" class="btn btn-primary btn-lg continue-btn">Continue &raquo;</a>
+    </div>
+    
+    <div id="convert">
+      <h2>Got a bad score? This game makes you smarter!</h2>
+      <h1>Play Light-Bot for free, right now</h1>
+      <img src="img/light-bot.png" class="light-bot"/>
+      <a href="#" class="btn btn-primary btn-lg continue-btn">Play now, free &raquo;</a>
+      <a href="http://light-bot.com/redirect-ios.html?r=hsay" class="app-store download"><img src="img/app-store.png" /></a>
+      <a href="http://light-bot.com/redirect-android.html?r=hsay" class="play-store download"><img src="img/play-store.png" /></a>
+    </div>
+    
+  </div>
+</div>
+
+<div id="fb-root"></div>
+</div>
+
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+<script type="text/x-handlebars-template" id="question_div-template">
+  <div class="question" style="display:none" data-qid="{{data.id}}">
+    <h3 class="title">{{ data.question }}</h3>
+    {{#each data.answers}}
+      <div class="answer-wrapper">
+        <input id="q{{../data.id}}-a{{this.id}}" type="radio" name="q{{../data.id}}" data-aid="{{this.id}}" data-is-correct="{{this.isCorrect}}"value="radiobutton" class="answer"/>
+        <label for="q{{../data.id}}-a{{this.id}}" class="answer">{{this.text}}</label>
+        <div style="clear:both"></div>
+      </div>
+    {{/each}}
+  </div>
+</script>
+
+<script>
+  window.FB_APP_ID = 175732445959885;
+  window.FB_APP_NAMESPACE = 'howsmartareyouu';
+</script>
+</body>
+</html>

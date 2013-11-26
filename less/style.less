@@ -1,0 +1,262 @@
+// Core variables and mixins
+@import "bootstrap.less";
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+body, h1, h2, h3, h4, h5{
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  background-image: url(../img/bgtile.jpg);
+  background-repeat: repeat;
+  &.blur{
+    #page-wrapper{
+      background: rgba(0, 0, 0, 0.2);
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  }
+}
+.btn-fb{
+  background: #3B5997;
+  color: #FFF;
+  &:hover{
+    color: white;
+    background: #4B70BD;
+    cursor: pointer;
+  }
+}
+
+#content-wrapper{
+  background: #FDF3F3;
+  width: 780px;
+  height: 530px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -265px;
+  margin-left: -390px;
+  border: 1px solid #DE8787;
+  box-shadow: inset 0 1px #FFF, 0 3px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+}
+#login{
+  position: relative;
+  #nerd{
+    display: block;
+    float: left;
+    top: 67px;
+    position: absolute;
+  }
+  h1{
+    position: absolute;
+    float: right;
+    font-size: 52pt;
+    font-weight: bold;
+    color: #631314;
+    text-shadow: 0 1px #FFF;
+    text-transform: uppercase;
+    width: 460px;
+    right: 34px;
+    text-align: center;
+    line-height: 71px;
+    top: 39px;
+    span{
+      display: block;
+      font-size: 90px;
+    }
+  }
+  h2{
+    float: right;
+    position: absolute;
+    top: 202px;
+    font-size: 19px;
+    color: #D64C4E;
+    right: 44px;
+  }
+  #fb-login{
+    font-size: 40px;
+    padding: 20px; 
+    float: right;
+    position: absolute;
+    top: 290px;
+    right: 30px; 
+    img{
+      margin-right: 15px;
+    }
+  }
+}
+#quiz{
+  display: none;
+  h1{
+    color: #FFF;
+    text-transform: uppercase;
+    text-shadow: 0 2px rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: -64px;
+    left: 14px;
+  }
+  .progress-wrapper{
+    padding: 25px;
+    height: 75px;
+    border-bottom: 1px solid #ECD7D7;
+    display: block;
+    >span{
+      font-weight: bold;
+      color: #C55A5A;
+      display: block;
+      float: left;
+      margin-right: 15px;
+    }
+  }
+  .progress-hsay {
+    height: 25px;
+    background-color: #FFF;
+    border: 1px solid #E3DADA;
+    box-shadow: inset 0 1px rgba(0, 0, 0, 0.03);
+    border-radius: 100px;
+    float: left;
+    width: 490px;
+    .progress-bar{
+      background-color: #FF7272;
+      border: 1px solid #CA5A5A;
+      box-shadow: inset 0 1px rgba(255, 255, 255, 0.3);
+      border-radius: 100px;
+    }
+  }
+  .dial{
+    position: absolute;
+    right: -60px;
+    top: -69px;
+    #needle{
+      position: absolute;
+      top: -18px;
+      z-index: 10;
+      left: 108px;
+    }
+    .your-score{
+      position: absolute;
+      top: 163px;
+      left: 93px;
+      font-size: 10px;
+      color: #892828;
+      text-transform: uppercase;
+    }
+    .score{
+      position: absolute;
+      top: 164px;
+      left: 60px;
+      font-size: 50px;
+      color: #892828;
+      width: 133px;
+      overflow: hidden;
+      text-align: center;
+      letter-spacing: -3px;
+    }
+  }
+  .content{
+    background: #FFF;
+    padding: 15px 35px;
+    height: 453px;
+    border-radius: 0 0 10px 10px;
+  }
+  .question{
+    .answer-wrapper{
+      margin-top: 20px;
+      cursor: pointer;
+      &:hover{
+        cursor: pointer;
+        background: #ECE8E8;
+        padding: 10px;
+        margin: 10px 0 -10px -10px;
+        border-radius: 10px;
+      }
+      &:nth-child(2){
+        &:hover{
+          margin-top: -10px;
+        }
+      }
+    }
+    .title{
+      color: #892828;
+      font-size: 36px;
+      line-height: 36px;
+      margin: 20px 0;
+      width: 560px;
+    }
+    input{
+      margin: 10px 15px 0 0;
+      display: inline-block;
+      height: 19px;
+      cursor: pointer;
+    }
+    .answer{
+      font-size: 24px;
+      color: #4F4141;
+      font-weight: normal;
+      max-width: 685px;
+      float: left;
+      cursor: pointer;
+    }
+  }
+}
+#report{
+  padding: 35px;
+  display: none;
+  h2{
+    margin: 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 19px;
+    color: #A03E3E; 
+  }
+  #infographic{
+    height: 396px;
+    width: 514px;
+    background-position-x: -23px;
+    background-position-y: -139px;
+    margin-left: -5px;
+  }
+  .continue-btn{
+    position: absolute;
+    bottom: 50px;
+    right: 30px;
+  }
+}
+#convert{
+  display: none;
+  text-align: center;
+  color: #6D1919;
+  padding: 120px 25px;
+  h2{
+    font-size: 26px;
+    line-height: 26px;
+  }
+  h1{
+    font-size: 43px;
+    line-height: 43px;
+    margin: 0;
+  }
+  .light-bot{
+    margin-top: 40px;
+  }
+  .continue-btn{
+    margin-left: 31px;
+    font-size: 24px;
+    margin-top: 38px;
+    padding: 15px 20px;
+  }
+  .app-store{
+    position: absolute;
+    bottom: 30px;
+    left: 210px;
+  }
+  .play-store{
+    position: absolute;
+    bottom: 30px;
+    left: 400px;
+  }
+}
