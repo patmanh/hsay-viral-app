@@ -200,7 +200,7 @@ $(document).ready(function(){
                 }
             ]
         },
-        {   "id":8,
+        {   "id":9,
             "question": "How many sides does a cube have?",
             "answers": [
                 {
@@ -300,7 +300,7 @@ $(document).ready(function(){
   }
   
   function goToConvert(){
-    mixpanel.track("Conversion Page Shown");
+    mixpanel.track("Conversion Quiz Shown");
 
     $("#report").hide();
     $("#convert").fadeIn();
@@ -310,6 +310,12 @@ $(document).ready(function(){
       mixpanel.track("CTA Clicked", {}, function(){debugger;
         window.location = "http://light-bot.com/flash-lite.html?r=hsay"
       });
+    });
+    
+    $("#convert input[type=radio]").change(function(e){
+      $(this).closest(".question").find(".answer-wrapper, >img").hide();
+      $(this).closest(".question").find(".cta").fadeIn();
+      mixpanel.track("Conversion Buttons Shown");
     });
   }
   
